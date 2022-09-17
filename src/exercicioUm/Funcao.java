@@ -22,5 +22,15 @@ public class Funcao {
 		}
 		Function<Produto, String> texto = p -> String.format("NOME: %s PREÇO %.2f PREÇO C/DESCONTO %.2f \n", p.getNome(), p.getPreco(), (p.getPreco() * (1 -  p.getDesconto())));
 		produtos.forEach(p -> System.out.print(texto.apply(p)));
+		
+		Function<Integer, String> parOuImpar = numero -> numero % 2 == 0 ? "PAR" : "Impar";
+		System.out.println(parOuImpar.apply(32));
+		
+		Function<String, String> oResultadoE = p -> " 0 Resultado E: " + p;
+		
+		Function<String, String> empolgado = p -> p + " DA HORA !!!";
+		
+		System.out.println(parOuImpar.andThen(oResultadoE).andThen(empolgado).apply(41));
+		
 	}
 }
