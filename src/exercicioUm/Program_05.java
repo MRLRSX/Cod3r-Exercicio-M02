@@ -19,8 +19,6 @@ public class Program_05 {
 		
 	}
 	
-
-	
 	static void meuImprimir(String nome) {
 		System.out.println("Oi meu nome e: " + nome);
 	}
